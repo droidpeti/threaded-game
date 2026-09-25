@@ -1,7 +1,6 @@
 
 g++ -Wall -g -c sfw.cpp -o sfw.o
-g++ -Wall -g -c test_scene.cpp -o test_scene.o
-g++ -Wall -g -c test_application.cpp -o test_application.o
+g++ -Wall -g -c game_scene.cpp -o game_scene.o
 g++ -Wall -g -c main.cpp -o main.o
 
-g++ -Wall -static-libgcc -static-libstdc++ -g sfw.o test_scene.o test_application.o main.o -lX11 -o game 
+g++ -Wall -static-libgcc -static-libstdc++ -g sfw.o game_scene.o main.o -lX11 -o game 
