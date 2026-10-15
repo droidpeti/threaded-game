@@ -1,4 +1,4 @@
-#include "sfw.h"
+#include "sfw/sfw.h"
 
 #include "game_application.h"
 

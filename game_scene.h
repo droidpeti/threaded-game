@@ -1,7 +1,7 @@
 #ifndef GAME_SCENE_H
 #define GAME_SCENE_H
 
-#include "sfw.h"
+#include "sfw/sfw.h"
 
 class GameScene: public Scene{
 	SFW_OBJECT(GameScene, Scene);

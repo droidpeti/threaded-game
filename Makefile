@@ -6,18 +6,18 @@ LDLIBS = -lX11
 OUT_DIR = out
 TARGET = $(OUT_DIR)/game
 
-SRCS = sfw.cpp game_scene.cpp main.cpp
+SRCS = sfw/sfw.cpp game_scene.cpp main.cpp
 
 OBJS = $(patsubst %.cpp, $(OUT_DIR)/%.o, $(SRCS))
 
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-	@mkdir -p $(OUT_DIR)
+	@mkdir -p $(dir $@)
 	$(CXX) $(LDFLAGS) $^ $(LDLIBS) -o $@
 
 $(OUT_DIR)/%.o: %.cpp
-	@mkdir -p $(OUT_DIR)
+	@mkdir -p $(dir $@)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
