@@ -6,7 +6,7 @@ LDLIBS = -lX11
 OUT_DIR = out
 TARGET = $(OUT_DIR)/game
 
-SRCS = sfw/sfw.cpp game_scene.cpp main.cpp
+SRCS = sfw/sfw.cpp game_scene.cpp main.cpp entities/player.cpp
 
 OBJS = $(patsubst %.cpp, $(OUT_DIR)/%.o, $(SRCS))
 
